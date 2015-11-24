@@ -13,7 +13,7 @@ def look_up(query_string):
         try:
             url = urllib2.urlopen(result)
             page = url.read()
-            soup = bs4.BeautifulSoup(page, 'html.parser')
+            soup = bs4.BeautifulSoup(page, "html.parser")
             raw = soup.get_text()
             clean = re.sub("[ \t\n]+", " ", raw)
             findings = re.findall(pattern, clean)
