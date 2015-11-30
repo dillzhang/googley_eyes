@@ -17,7 +17,8 @@ common_list = ["yes", "no", "the",
                "woman", "girl", "boy",
                "permalink", "hide", "warner",
                "bros", "dc", "marvel",
-               "dark", "knight", "white"]
+               "dark", "knight", "white",
+               "retrieved"]
 
 
 def look_up(query_string):
