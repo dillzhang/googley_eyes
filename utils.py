@@ -43,10 +43,39 @@ def look_up(query_string):
 
 
 def most_common(lst):
+    """Returns the most common word(s) in a given text                                                               
+ 
+    Arguments:                                                                                                        
+    lst: a list of words found in a text                                                                             
+    
+    Returns:                                                                                                              
+    >>> most_common([])
+    None
+
+    >>> most_common(["test"])                                                                                    
+    "test"
+    
+    >>> most_common(["Wow","What Is Sleep","Wow","Queue Queue","Wow"])                                           
+    "Wow"                                                                                                       
+    """ 
     return max(set(lst), key=lst.count)
 
 
 def clean_common(string):
+    """Returns a new string with all the common words (in the list above) removed
+
+    Arguments:
+    string: the string of text
+
+    Returns:
+    
+    >>> clean_common("the the the the pizza"):
+    "pizza"
+
+    >>> clean_common("the the the the a the the"):
+    ""
+
+    """
     lst = string.split(" ")
     i = 0
     while i < len(lst):
@@ -55,3 +84,10 @@ def clean_common(string):
         else:
             i += 1
     return " ".join(lst)
+
+def test_one():
+    string = "hello hello hello hi hi hi hi the the the the the the"
+    lst = string.split(" ")
+    print "Given " + string
+    print "clean_common returns " + clean_common(string)
+    print "most_common returns " + most_common(lst)

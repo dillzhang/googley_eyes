@@ -18,4 +18,5 @@ def home():
 if __name__ == "__main__":
     app.debug = True
     app.secret_key = utils.secret_key
+    utils.test_one()
     app.run('0.0.0.0', port=8000)
