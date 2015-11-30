@@ -1,0 +1,29 @@
+body {
+    background-color: #1D1B20;
+}
+
+div {
+    background-color: #4D4D4D;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    padding: 20px;
+    text-align:center;
+}
+
+h1 {
+    color: red;
+    font-size: 60px;
+}
+
+h2 {
+    color: white;
+    font-size: 40px;
+}
+
+input[type="text"]
+{
+    font-size: 30px;
+    width:900px;
+}
